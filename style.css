@@ -1,0 +1,99 @@
+body {
+    height: 100vh;
+    margin: 1em;
+}
+/* margin et border de test*/
+
+/* haut de page */
+#horodatage {
+    border: solid 1px;
+    min-height: 7em;
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+
+}
+
+.date{
+    font-weight: 10px;
+}
+.heure {
+    font-size: 3em;
+    font-weight: 10px;
+}
+ /* centre */
+.main {
+    display: flex;
+    border: solid 1px;
+    flex: 1fr;
+}
+
+#cadre_meteo {
+    border: solid 1px;
+    height: 45em;
+    padding: 1em;
+}
+
+
+.météo {
+    max-height: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+/*  barre qualité d'air*/
+.couleur {
+    padding: 3px;
+    height: 1em;
+    width: 15em;
+    text-align: center;
+    flex-direction: row;
+}
+
+.couleur[value="1"] {
+    background-color: var(--color-ia-bleu);}
+
+.couleur[value="2"] {
+    background-color: var(--color-ia-vert);}
+
+.couleur[value="3"] {
+    background-color: var(--color-ia-jaune);}
+
+.couleur[value="4"] {
+    background-color: var(--color-ia-rouge);}
+
+.couleur[value="5"] {
+    background-color: var(--color-ia-violet);}
+
+.couleur[value="6"] {
+    background-color: var(--color-ia-rose);}
+
+/* couleur d'origine  */
+:root {
+    --color-ia-bleu: #50F0E6;
+    --color-ia-vert: #50CCAA;
+    --color-ia-jaune: #F0E641;
+    --color-ia-rouge: #ff5050;
+    --color-ia-violet: #960032;
+    --color-ia-rose: #872181;
+}
+
+#barre_A{
+    display: flex;
+    max-width: 100%;
+
+}
+
+/*bas de page */
+.logoR {
+    height: 35px;
+}
+
+#cadre_footer {
+    max-height: 100%;
+    border: solid 1px;
+    margin-top: 1em;
+    display: flex;
+    
+}
