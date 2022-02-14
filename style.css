@@ -1,18 +1,17 @@
 body {
     height: 100vh;
-    margin: 1em;
     display: flex;
+    margin:0;
     flex-direction: column;
 }
 /* margin et border de test*/
 
 /* haut de page */
 #horodatage {
-    border: solid 1px;
-    min-height: 7em;
+    border-bottom: solid 2px;
+    min-height: 4rem;
     display: flex;
     max-width: 100%;
-    margin-bottom: 1em;
     padding: 0.5em;
 
 }
@@ -29,15 +28,14 @@ body {
     display: flex;
     border: solid 1px;
     flex: 1fr;
-    flex-direction: column;
 }
 
 #cadre_meteo {
-    border: solid 1px;
-    height: 45em;
+    height: 80vh;
     padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
-
 
 .météo {
     max-height: 100%;
@@ -45,7 +43,7 @@ body {
     height: 150px;
 }
 
-/*  barre qualité d'air*/
+/*  barre qualité d'air */
 .couleur {
     padding: 3px;
     height: 1em;
@@ -53,22 +51,16 @@ body {
     text-align: center;
     flex-direction: row;
 }
-
 .couleur[value="1"] {
     background-color: var(--color-ia-bleu);}
-
 .couleur[value="2"] {
     background-color: var(--color-ia-vert);}
-
 .couleur[value="3"] {
     background-color: var(--color-ia-jaune);}
-
 .couleur[value="4"] {
     background-color: var(--color-ia-rouge);}
-
 .couleur[value="5"] {
     background-color: var(--color-ia-violet);}
-
 .couleur[value="6"] {
     background-color: var(--color-ia-rose);}
 
@@ -81,11 +73,27 @@ body {
     --color-ia-violet: #960032;
     --color-ia-rose: #872181;
 }
+.cadre_fleche{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+}
+.fleche{
+    height: 50px;
+    width: 50px;
+    rotate: 90deg;
+}
+
+.fleche-col{ /* css de deplacement de la fleche */
+    grid-column-start: 3;
+    text-align: center;
+}
 
 #barre_A{
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
-
 }
 
 /*bas de page */
@@ -94,9 +102,28 @@ body {
 }
 
 #cadre_footer {
-    max-height: 100%;
-    border: solid 1px;
-    margin-top: 1em;
+    height: 1fr;
+    /* border: solid 1px; */
     display: flex;
     
 }
+
+.celcus{
+   
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+
+}
+.celcus span{ /* temperature*/
+    border-right: solid 2px;
+    margin-right: 1rem;
+    font-size: 50px;
+    
+}
+
+.cadre_rea{
+    text-align: start;
+
+}
+
+
