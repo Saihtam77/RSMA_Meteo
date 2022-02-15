@@ -156,10 +156,31 @@ body {
     margin-top: 0.5rem;
 }
 
+#cadre_sport{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.sport img{
+    height: 95px;
+    width: 95px;
+    margin-right: 1rem;
+}
+
+.sport{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start:2;
+    grid-row-start: 2;
+    font-size: 24px;
+}
+
 /*bas de page */
 .logoR {
     height: 35px;
     width: 97px;
+    
 }
 
 #cadre_footer {
@@ -178,4 +199,9 @@ body {
 
 .cadre_logo {
     width: 50%;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
 }
+
+
