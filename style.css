@@ -13,15 +13,22 @@ body {
     display: flex;
     max-width: 100%;
     padding: 0.5em;
+}
 
+#horodatage :first-child{
+    width: 50%;
 }
 
 .date{
     font-weight: 10px;
+    width: 50%;
 }
 .heure {
     font-size: 3em;
     font-weight: 10px;
+    width: 50%;
+    display: flex;
+    justify-content: end;
 }
  /* centre */
 .main {
@@ -49,7 +56,6 @@ body {
     height: 1em;
     flex: 1;
     text-align: center;
-    flex-direction: row;
 }
 .couleur[value="1"] {
     background-color: var(--color-ia-bleu);}
@@ -81,7 +87,7 @@ body {
 .fleche{
     height: 50px;
     width: 50px;
-    rotate: 90deg;
+    transform: rotate(135deg);
 }
 
 .fleche-col{ /* css de deplacement de la fleche */
@@ -94,25 +100,27 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
+    text-align: center;
 }
 
 /*bas de page */
 .logoR {
     height: 35px;
+    width: 97px;
 }
 
 #cadre_footer {
     height: 1fr;
     /* border: solid 1px; */
     display: flex;
+    max-width: 100%;
     
 }
 
 .celcus{
-   
     display: flex;
     grid-template-columns: 1fr 1fr;
-
+    width: 50%;
 }
 .celcus span{ /* temperature*/
     border-right: solid 2px;
@@ -123,7 +131,12 @@ body {
 
 .cadre_rea{
     text-align: start;
-
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
 }
 
-
+.cadre_logo{
+    width: 50%;
+}

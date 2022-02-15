@@ -11,16 +11,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="updateTime();">
     <header>
         <div id="horodatage">
-
             <div>
-                <div class="date">10 février 2002 </div>
+                <div class="date"></div>
                 <div class="actualisation">Actualisé le 7/2/22 à 19h30</div>
                 <!--a actualiser toute les  5-10min-->
             </div>
-            <div class="heure">15h50</div> <!-- horlogue-->
+            <div class="heure"></div> <!-- horlogue-->
 
         </div>
     </header>
@@ -30,7 +29,7 @@
 
             <section>
                 <div class="info_météo">
-                    <img class="météo" src="icone météo/couvert.png">
+                    <div class="cadre_m"><img class="météo" src="icone météo/couvert.png"></div>
 
                     <div class="celcus">
                         <span>58°C</span>
@@ -44,24 +43,31 @@
             </section>
 
             <div class="cadre_fleche">
-                <span class="fleche-col">
-                    <img class="fleche" src="images/fleche.jpg">
-                </span> <!-- text de la barre a afficher avec le JS -->
+                <span class="fleche-col"><img class="fleche" src="images/fleche.png"></span> <!-- text de la barre a afficher avec le JS -->
 
             </div>
 
             <div id="barre_A">
                 <!--qualité de l'aire -->
-                <div class="couleur" value="1">Bon</div>
-                <div class="couleur" value="2">Moyen</div>
-                <div class="couleur" value="3">Dégradé</div>
-                <div class="couleur" value="4">Mauvais</div>
-                <div class="couleur" value="5">Très Mauvais</div>
-                <div class="couleur" value="6">Extrèmement Mauvais</div>
+                <div class="couleur" value="1"></div>
+                <div class="couleur" value="2"></div>
+                <div class="couleur" value="3"></div>
+                <div class="couleur" value="4"></div>
+                <div class="couleur" value="5"></div>
+                <div class="couleur" value="6"></div>
+            </div>
+            <div id="barre_A">
+                <div>Bon</div>
+                <div>Moyen</div>
+                <div>Dégradé</div>
+                <div>Mauvais</div>
+                <div>Très mauvais</div>
+                <div>Extrèmement mauvais</div>
             </div>
 
             <div id="cadre_sport">
                 <div class="sport">
+                        <img src="/images/check.png" alt="">
                     <!-- indice de pratique sportive-->
                 </div>
             </div>
@@ -72,7 +78,7 @@
     </main>
     <footer>
         <div id="cadre_footer">
-            <img class="logoR" src="images/logo rsma.png"> <!-- (logo RSMA)-->
+            <div class="cadre_logo" ><img class="logoR" src="images/logo rsma.png"></div> <!-- espace logo-->
             <div class="cadre_rea">
                 <div>réalisateur:section D-Web, (2021-2022)</div>
                 <div>JOJO</div>
