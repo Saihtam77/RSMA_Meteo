@@ -1,0 +1,156 @@
+{
+  "objectIdFieldName": "ESRI_OID",
+  "uniqueIdField": { "name": "ESRI_OID", "isSystemMaintained": true },
+  "globalIdFieldName": "",
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": { "wkid": 4326, "latestWkid": 4326 },
+  "fields": [
+    {
+      "name": "code_qual",
+      "type": "esriFieldTypeInteger",
+      "alias": "code_qual",
+      "sqlType": "sqlTypeOther",
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "lib_qual",
+      "type": "esriFieldTypeString",
+      "alias": "lib_qual",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "coul_qual",
+      "type": "esriFieldTypeString",
+      "alias": "coul_qual",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "date_dif",
+      "type": "esriFieldTypeString",
+      "alias": "date_dif",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "source",
+      "type": "esriFieldTypeString",
+      "alias": "source",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "type_zone",
+      "type": "esriFieldTypeString",
+      "alias": "type_zone",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "code_zone",
+      "type": "esriFieldTypeString",
+      "alias": "code_zone",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "lib_zone",
+      "type": "esriFieldTypeString",
+      "alias": "lib_zone",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    },
+    {
+      "name": "date_ech",
+      "type": "esriFieldTypeString",
+      "alias": "date_ech",
+      "sqlType": "sqlTypeOther",
+      "length": 60000,
+      "domain": null,
+      "defaultValue": null
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "code_qual": 4,
+        "lib_qual": "Mauvais",
+        "coul_qual": "#FF5050",
+        "date_dif": "2022-02-15T00:00:00Z",
+        "source": "Madininair",
+        "type_zone": "commune",
+        "code_zone": "97213",
+        "lib_zone": "Le Lamentin",
+        "date_ech": "2022-02-16T00:00:00Z"
+      }
+    },
+    {
+      "attributes": {
+        "code_qual": 4,
+        "lib_qual": "Mauvais",
+        "coul_qual": "#FF5050",
+        "date_dif": "2022-02-15T00:00:00Z",
+        "source": "Madininair",
+        "type_zone": "commune",
+        "code_zone": "97213",
+        "lib_zone": "Le Lamentin",
+        "date_ech": "2022-02-15T00:00:00Z"
+      }
+    },
+    {
+      "attributes": {
+        "code_qual": 2,
+        "lib_qual": "Moyen",
+        "coul_qual": "#50CCAA",
+        "date_dif": "2022-02-14T00:00:00Z",
+        "source": "Madininair",
+        "type_zone": "commune",
+        "code_zone": "97213",
+        "lib_zone": "Le Lamentin",
+        "date_ech": "2022-02-14T00:00:00Z"
+      }
+    },
+    {
+      "attributes": {
+        "code_qual": 2,
+        "lib_qual": "Moyen",
+        "coul_qual": "#50CCAA",
+        "date_dif": "2022-02-13T00:00:00Z",
+        "source": "Madininair",
+        "type_zone": "commune",
+        "code_zone": "97213",
+        "lib_zone": "Le Lamentin",
+        "date_ech": "2022-02-13T00:00:00Z"
+      }
+    },
+    {
+      "attributes": {
+        "code_qual": 2,
+        "lib_qual": "Moyen",
+        "coul_qual": "#50CCAA",
+        "date_dif": "2022-02-12T00:00:00Z",
+        "source": "Madininair",
+        "type_zone": "commune",
+        "code_zone": "97213",
+        "lib_zone": "Le Lamentin",
+        "date_ech": "2022-02-12T00:00:00Z"
+      }
+    }
+  ]
+}

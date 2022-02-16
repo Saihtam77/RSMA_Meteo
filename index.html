@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body onload="updateTime();">
+  <body onload="all();">
     <header>
       <div id="horodatage">
         <div>
@@ -24,34 +24,32 @@
     </header>
 
     <main>
-      <!-- <div id="cadre_meteo"> -->
+      <div id="cadre_meteo">
+        <section>
+          <div class="info_météo">
+            <div class="cadre_img">
+              <img class="météo" src="icone météo/couvert.png" />
+            </div>
 
-      <section>
-        <div class="info_meteo">
-          <div class="cadre_img">
-            <img class="image-meteo" src="icone météo/couvert.png" />
-          </div>
-
-          <div class="celcus">
-            <span>58°C</span>
-            <div class="info_celsus">
-              <div>Précipitation: 2%</div>
-              <div>humidité: 80%</div>
-              <div>Vent: 8km/h</div>
+            <div class="celcus">
+              <span>58°C</span>
+              <div class="info_celsus">
+                <div>Précipitation: 2%</div>
+                <div>humidité: 80%</div>
+                <div>Vent: 8km/h</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
         <div class="cadre_fleche">
-          <span class="fleche-col">
-            <img class="fleche" src="images/fleche.png" />
-          </span>
+          <span class="fleche-col"
+            ><img class="fleche" src="images/fleche.png"
+          /></span>
           <!-- text de la barre a afficher avec le JS -->
         </div>
 
-        <div class="barre_grid barre">
+        <div id="barre_A">
           <!--qualité de l'aire -->
           <div class="couleur" value="1"></div>
           <div class="couleur" value="2"></div>
@@ -60,7 +58,7 @@
           <div class="couleur" value="5"></div>
           <div class="couleur" value="6"></div>
         </div>
-        <div class="barre_grid barre_text">
+        <div id="barre_A">
           <div>Bon</div>
           <div>Moyen</div>
           <div>Dégradé</div>
@@ -68,9 +66,7 @@
           <div>Très mauvais</div>
           <div>Extrèmement mauvais</div>
         </div>
-      </section>
 
-      <section>
         <div id="cadre_sport">
           <div class="sport">
             <!-- <img src="/images/autorisé.png"> -->
@@ -82,11 +78,8 @@
             <!-- indice de pratique sportive-->
           </div>
         </div>
-      </section>
-
-      <!-- </div> -->
+      </div>
     </main>
-
     <footer>
       <div id="cadre_footer">
         <div class="cadre_logo">
@@ -97,9 +90,8 @@
           <div>réalisateur: section D-Web, (2021-2022)</div>
           <div>JOJO</div>
           <div>ALCINDOR N</div>
-          <div>Jolly</div>
+          <div>Joly</div>
         </div>
-
         <!-- ajouté source -->
       </div>
     </footer>

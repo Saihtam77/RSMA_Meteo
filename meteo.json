@@ -1,0 +1,24 @@
+{
+    "TFFF": {
+        "station_id": "TFFF",
+        "raw": "TFFF 161100Z AUTO 11013KT 9999 OVC032 25\/20 Q1018 TEMPO 3000 SHRA BKN020TCU",
+        "temp": "25.0",
+        "dewpoint": "20.0",
+        "wind": "110",
+        "wind_vel": "13",
+        "visibility": "6.21",
+        "alt_hg": "30.05",
+        "alt_mb": "",
+        "wx": "RA",
+        "auto_report": "",
+        "sky_conditions": [
+            {
+                "coverage": "OVC",
+                "base_agl": "3200"
+            }
+        ],
+        "category": "VFR",
+        "report_type": "METAR",
+        "time_of_obs": "2022-02-16T11:00:00Z"
+    }
+}
