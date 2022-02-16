@@ -1,15 +1,37 @@
+function all() { //execute tout les fonction
+    updateTime();
+    updateData();
+}
 
-//actualisation de l'heure et de la date tout les minute
-function refresh() {
-    let t_time = 1000; // rafraîchissement en millisecondes de l'horloge
+
+function refresh_data() {//timer pour l'actualisation des donnés
+    let t_data = 60000;
+    setTimeout('weather()', t_data)
+}
+
+function refresh_date() {//timer pour l'actualisatoin de l'horloge et de la date
+    let t_time = 1000;
     setTimeout('updateTime()', t_time)
 }
 
-function updateTime() {
+
+
+function updateTime() {//fonction pour l'horloge et la date
     showDate();
     showTime();
-    refresh();
+    refresh_date();
 }
+
+function updateData() { //fonction pour les gestion des donner météo
+
+    weather();
+    refresh_data();
+
+}
+
+
+
+//Creation des fonction//
 
 
 //Création de l'horloge et de la date
@@ -36,7 +58,50 @@ function showDate() {
     if (jours < 10) { jours = "0" + jours; }
     if (mois < 10) { mois = "0" + mois; }
 
-    let resultat = jours + "/" + mois + "/" + annees
+    let resultat = jours + "/" + mois + "/" + annees;
 
     document.querySelector(".date").innerHTML = resultat;
+}
+
+
+//fonction météo
+function weather() { //Change les element donner en fonction de donnée
+
+    const météo = document.querySelector(".météo");
+
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let fetchInit = {
+        method: 'GET',
+        headers: myHeaders,
+        mode: 'no-cors',
+        cache: 'default'
+    };
+
+    fetch("data.json", fetchInit)
+        .then(data => { //success or not
+            if (data.ok) {
+
+                console.log("sucess")
+            }
+            else {
+
+                console.log("fail")
+            }
+            return data;
+        })
+        .then(data => data.json())//Conversion en json
+
+        .then(jsonData => {
+            console.log(jsonData);
+
+            let today = {
+
+                dewpoint: jsonData.TFFF.dewpoint,
+                temperature: jsonData.TFFF.temp,
+
+            }
+            console.log(today.temperature)
+        })
 }
