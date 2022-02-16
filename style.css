@@ -21,8 +21,12 @@ body {
 
 /* margin et border de test*/
 
+<<<<<<< HEAD
 /* header */
 
+=======
+/* haut de page */
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 #horodatage {
   border-bottom: solid 2px;
   min-height: 4rem;
@@ -46,6 +50,7 @@ body {
   width: 50%;
   display: flex;
   justify-content: end;
+<<<<<<< HEAD
 }
 
 /* Zone principale */
@@ -62,15 +67,47 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+=======
+}
+
+/* centre */
+.main {
+  display: flex;
+  border: solid 1px;
+  flex: 1fr;
+}
+
+#cadre_meteo {
+  height: 80vh;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.cadre_img {
+  width: 15%;
+}
+
+.info_météo {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 }
 
 .celcus {
   display: flex;
   grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
   height: 1fr;
   align-self: center;
   margin-left: 1em;
   margin-right: 1em;
+=======
+  width: 85%;
+  height: 1fr;
+  align-self: center;
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 }
 
 .celcus span {
@@ -82,6 +119,7 @@ main {
   height: 35px;
 }
 
+<<<<<<< HEAD
 .celcus div {
   width: 1fr;
 }
@@ -95,6 +133,20 @@ main {
 
 .cadre_fleche {
   display: grid;
+=======
+.météo {
+  max-height: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+/*  barre qualité d'air */
+.couleur {
+  padding: 3px;
+  height: 1em;
+  flex: 1;
+  text-align: center;
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 }
 
 /*  Couleurs barre qualité d'air */
@@ -123,14 +175,34 @@ main {
   background-color: var(--color-ia-rose);
 }
 
+<<<<<<< HEAD
 
 
+=======
+/* couleur d'origine  */
+:root {
+  --color-ia-bleu: #50f0e6;
+  --color-ia-vert: #50ccaa;
+  --color-ia-jaune: #f0e641;
+  --color-ia-rouge: #ff5050;
+  --color-ia-violet: #960032;
+  --color-ia-rose: #872181;
+}
+
+.cadre_fleche {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 
 .fleche {
   height: 50px;
   width: 50px;
   transform: rotate(135deg);
+<<<<<<< HEAD
   margin-bottom: 0.5rem;
+=======
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 }
 
 .fleche-col {
@@ -139,6 +211,7 @@ main {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .barre_grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -147,16 +220,33 @@ main {
 
 .barre_text {
   text-align: center;
+=======
+#barre_A {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 100%;
+  text-align: center;
+}
+
+#barre_A div {
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
   margin-top: 0.5rem;
 }
 
 #cadre_sport {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: 1fr;
   justify-items: center;
   grid-template-rows: repeat(2, 1fr);
 }
 
+=======
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
 .sport img {
   height: 95px;
   width: 95px;
@@ -167,6 +257,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+=======
+  grid-column-start: 2;
+  grid-row-start: 2;
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
   font-size: 24px;
 }
 
@@ -195,6 +290,7 @@ main {
   padding-left: 1rem;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
 }
 
 /* média Q sur "main"*/
@@ -289,3 +385,6 @@ main {
     top: 50%;
   }
 }
+=======
+}
+>>>>>>> 41b8d0a0854b119a638fb6adb5a011dc1ab17161
