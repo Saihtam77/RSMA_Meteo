@@ -79,7 +79,7 @@ function weather() { //Change les element donner en fonction de donnée
         cache: 'default'
     };
 
-    fetch("data.json", fetchInit)
+    fetch("meteo.json", fetchInit)
         .then(data => { //success or not
             if (data.ok) {
 
@@ -98,7 +98,7 @@ function weather() { //Change les element donner en fonction de donnée
 
             let today = {
 
-                dewpoint: jsonData.TFFF.dewpoint,
+                state: jsonData.TFFF.wx,
                 temperature: jsonData.TFFF.temp,
 
             }
