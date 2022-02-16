@@ -1,90 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSMA Météo</title>
 
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div id="horodatage">
-
-            <div>
-                <div class="date">10 février 2002 </div>
-                <div class="actualisation">Actualisé le 7/2/22 à 19h30</div>
-                <!--a actualiser toute les  5-10min-->
-            </div>
-            <div class="heure">15h50</div> <!-- horlogue-->
-
+      <div id="horodatage">
+        <div>
+          <div class="date">10 février 2002</div>
+          <div class="actualisation">Actualisé le 7/2/22 à 19h30</div>
+          <!--a actualiser toute les  5-10min-->
         </div>
+        <div class="heure">15h50</div>
+        <!-- horloge-->
+      </div>
     </header>
 
     <main>
-        <div id="cadre_meteo">
+      <div id="cadre_meteo">
+        <section>
+          <div class="info_météo">
+            <img class="météo" src="icone météo/couvert.png" />
 
-            <section>
-                <div class="info_météo">
-                    <img class="météo" src="icone météo/couvert.png">
-
-                    <div class="celcus">
-                        <span>58°C</span>
-                        <div class="info_celsus">
-                            <div>Précipitation: 2%</div>
-                            <div>humidité: 80%</div>
-                            <div>Vent: 8km/h</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="cadre_fleche">
-                <span class="fleche-col">
-                    <img class="fleche" src="images/fleche.jpg">
-                </span> <!-- text de la barre a afficher avec le JS -->
-
+            <div class="celcus">
+              <span>58°C</span>
+              <div class="info_celsus">
+                <div>Précipitation: 2%</div>
+                <div>humidité: 80%</div>
+                <div>Vent: 8km/h</div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div id="barre_A">
-                <!--qualité de l'aire -->
-                <div class="couleur" value="1">Bon</div>
-                <div class="couleur" value="2">Moyen</div>
-                <div class="couleur" value="3">Dégradé</div>
-                <div class="couleur" value="4">Mauvais</div>
-                <div class="couleur" value="5">Très Mauvais</div>
-                <div class="couleur" value="6">Extrèmement Mauvais</div>
-            </div>
-
-            <div id="cadre_sport">
-                <div class="sport">
-                    <!-- indice de pratique sportive-->
-                </div>
-            </div>
-
+        <div class="cadre_fleche">
+          <span class="fleche-col">
+            <img class="fleche" src="images/fleche.jpg" />
+          </span>
+          <!-- texte de la barre a afficher avec le JS -->
         </div>
 
+        <div id="barre_A">
+          <!--qualité de l'air -->
+          <div class="couleur" value="1">Bon</div>
+          <div class="couleur" value="2">Moyen</div>
+          <div class="couleur" value="3">Dégradé</div>
+          <div class="couleur" value="4">Mauvais</div>
+          <div class="couleur" value="5">Très Mauvais</div>
+          <div class="couleur" value="6">Extrèmement Mauvais</div>
+        </div>
 
+        <div id="cadre_sport">
+          <div class="sport">
+            <!-- indice de pratique sportive-->
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-        <div id="cadre_footer">
-            <img class="logoR" src="images/logo rsma.png"> <!-- (logo RSMA)-->
-            <div class="cadre_rea">
-                <div>réalisateur:section D-Web, (2021-2022)</div>
-                <div>JOJO</div>
-                <div>ALCINDOR N</div>
-                <div>Jolly</div>
-            </div>
-
-            <!-- ajouté source -->
+      <div id="cadre_footer">
+        <img class="logoR" src="images/logo rsma.png" />
+        <!-- (logo RSMA)-->
+        <div class="cadre_rea">
+          <div>réalisateur:section D-Web, (2021-2022)</div>
+          <div>JOJO</div>
+          <div>ALCINDOR N</div>
+          <div>Joly</div>
         </div>
+      </div>
 
-
+      <!-- ajouté source -->
     </footer>
-</body>
-
+  </body>
 </html>

@@ -1,129 +1,128 @@
 body {
-    height: 100vh;
-    display: flex;
-    margin:0;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
 }
 /* margin et border de test*/
 
 /* haut de page */
 #horodatage {
-    border-bottom: solid 2px;
-    min-height: 4rem;
-    display: flex;
-    max-width: 100%;
-    padding: 0.5em;
-
+  border-bottom: solid 2px;
+  min-height: 4rem;
+  display: flex;
+  max-width: 100%;
+  padding: 0.5em;
 }
 
-.date{
-    font-weight: 10px;
+.date {
+  font-weight: 10px;
 }
 .heure {
-    font-size: 3em;
-    font-weight: 10px;
+  font-size: 3em;
+  font-weight: 10px;
 }
- /* centre */
+/* centre */
 .main {
-    display: flex;
-    border: solid 1px;
-    flex: 1fr;
+  display: flex;
+  border: solid 1px;
+  flex: 1fr;
 }
 
 #cadre_meteo {
-    height: 80vh;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+  height: 80vh;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .météo {
-    max-height: 100%;
-    width: 150px;
-    height: 150px;
+  max-height: 100%;
+  width: 150px;
+  height: 150px;
 }
 
 /*  barre qualité d'air */
 .couleur {
-    padding: 3px;
-    height: 1em;
-    flex: 1;
-    text-align: center;
-    flex-direction: row;
+  padding: 3px;
+  height: 1em;
+  flex: 1;
+  text-align: center;
+  flex-direction: row;
 }
 .couleur[value="1"] {
-    background-color: var(--color-ia-bleu);}
+  background-color: var(--color-ia-bleu);
+}
 .couleur[value="2"] {
-    background-color: var(--color-ia-vert);}
+  background-color: var(--color-ia-vert);
+}
 .couleur[value="3"] {
-    background-color: var(--color-ia-jaune);}
+  background-color: var(--color-ia-jaune);
+}
 .couleur[value="4"] {
-    background-color: var(--color-ia-rouge);}
+  background-color: var(--color-ia-rouge);
+}
 .couleur[value="5"] {
-    background-color: var(--color-ia-violet);}
+  background-color: var(--color-ia-violet);
+}
 .couleur[value="6"] {
-    background-color: var(--color-ia-rose);}
+  background-color: var(--color-ia-rose);
+}
 
 /* couleur d'origine  */
 :root {
-    --color-ia-bleu: #50F0E6;
-    --color-ia-vert: #50CCAA;
-    --color-ia-jaune: #F0E641;
-    --color-ia-rouge: #ff5050;
-    --color-ia-violet: #960032;
-    --color-ia-rose: #872181;
+  --color-ia-bleu: #50f0e6;
+  --color-ia-vert: #50ccaa;
+  --color-ia-jaune: #f0e641;
+  --color-ia-rouge: #ff5050;
+  --color-ia-violet: #960032;
+  --color-ia-rose: #872181;
 }
-.cadre_fleche{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-
+.cadre_fleche {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
-.fleche{
-    height: 50px;
-    width: 50px;
-    rotate: 90deg;
-}
-
-.fleche-col{ /* css de deplacement de la fleche */
-    grid-column-start: 3;
-    text-align: center;
+.fleche {
+  height: 50px;
+  width: 50px;
+  transform: rotate(90deg);
 }
 
-#barre_A{
-    /* display: flex; */
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    max-width: 100%;
+.fleche-col {
+  /* css de deplacement de la fleche */
+  grid-column-start: 3;
+  text-align: center;
+}
+
+#barre_A {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 100%;
 }
 
 /*bas de page */
 .logoR {
-    height: 35px;
+  height: 35px;
 }
 
 #cadre_footer {
-    height: 1fr;
-    /* border: solid 1px; */
-    display: flex;
-    
+  height: 1fr;
+  /* border: solid 1px; */
+  display: flex;
 }
 
-.celcus{
-   
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-
+.celcus {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
 }
-.celcus span{ /* temperature*/
-    border-right: solid 2px;
-    margin-right: 1rem;
-    font-size: 50px;
-    
+.celcus span {
+  /* temperature*/
+  border-right: solid 2px;
+  margin-right: 1rem;
+  font-size: 50px;
 }
 
-.cadre_rea{
-    text-align: start;
-
+.cadre_rea {
+  text-align: start;
 }
-
-
