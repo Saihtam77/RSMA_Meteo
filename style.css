@@ -244,6 +244,8 @@ main {
 
   .barre_text {
     align-items: center;
+    text-align: left;
+    margin-left: 0.5em;
   }
 
   section:nth-child(2) {
