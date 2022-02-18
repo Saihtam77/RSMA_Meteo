@@ -223,10 +223,11 @@ fetch(queryUrl) //si pas internet utiliser le fichier data.json, si internet uti
 
         // Je dois sélectionner l'élément qualité de l'air du let today , afin de l'appliquer à la flèche
         updateFleche(today.qualite);
-        console.log(today.qualite);
+        //console.log(today.qualite);
       });
     } else {
       console.log("ERREUR lecture json");
+      
     }
   });
 
