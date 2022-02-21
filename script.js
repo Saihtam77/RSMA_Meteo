@@ -148,8 +148,9 @@ fetch(queryUrl) //si pas internet utiliser le fichier data.json, si internet uti
         // récupérer les éléments dont on veut changer la valeur dans la page et changer
 
         // Je dois sélectionner l'élément qualité de l'air du let today , afin de l'appliquer à la flèche
+        //Puis ajouter toute les fonctions correspondante
         updateFleche(today.qualite);
-        console.log(today.qualite);
+        /*console.log(today.qualite);*/
       });
     } else {
       console.log("ERREUR lecture json");
@@ -163,6 +164,17 @@ function updateFleche(value) {
   fleche[0].style.gridColumnStart = value;
 }
 
-function authorizationSport(value) {
-  //recuper element
+//recuper element .sport
+//changer les éléments pour qu'ils s'affichent au bon moment selon (l'humidité-air-celcius)
+
+function authorizationSport(qualiteAir, indiceTemperature) {
+  var icons = document.getElementsByClassName("sport");
+  if (indice >= 32) {
+    icons.src = "images/restrint.png";
+  } else if (indice > 32) {
+    icons.src = "/images/déconseillé.png";
+  } else if (indice < 32) {
+    icons.src = "/images/autorisé.png";
+  }
 }
+window.addEventListener();
