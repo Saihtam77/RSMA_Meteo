@@ -15,7 +15,7 @@
       <div id="horodatage">
         <div>
           <div class="date"></div>
-          <div class="actualisation">Actualisé le 7/2/22 à 19h30</div>
+          <div class="actualisation">Actualisé à 19h30</div>
           <!--a actualiser toute les  5-10min-->
         </div>
         <div class="heure"></div>
@@ -24,32 +24,32 @@
     </header>
 
     <main>
-      <div id="cadre_meteo">
-        <section>
-          <div class="info_météo">
-            <div class="cadre_img">
-              <img class="météo" src="icone météo/couvert.png" />
-            </div>
+      <section>
+        <div class="info_meteo">
+          <div class="cadre_img">
+            <img class="image-meteo" src="icone météo/temperature(haute).png" />
+          </div>
 
-            <div class="celcus">
-              <span>58°C</span>
-              <div class="info_celsus">
-                <div>Précipitation: 2%</div>
-                <div>humidité: 80%</div>
-                <div>Vent: 8km/h</div>
-              </div>
+          <div class="celcus">
+            <span></span>
+            <div class="info_celcus">
+              <div class="precipitation"></div>
+              <div class="humidite"></div>
+              <div class="vitesse_vent"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <section>
         <div class="cadre_fleche">
-          <span class="fleche-col"
-            ><img class="fleche" src="images/fleche.png"
-          /></span>
+          <span class="fleche-col">
+            <img class="fleche" src="images/fleche.png" />
+          </span>
           <!-- text de la barre a afficher avec le JS -->
         </div>
 
-        <div id="barre_A">
+        <div class="barre_grid barre">
           <!--qualité de l'aire -->
           <div class="couleur" value="1"></div>
           <div class="couleur" value="2"></div>
@@ -58,7 +58,7 @@
           <div class="couleur" value="5"></div>
           <div class="couleur" value="6"></div>
         </div>
-        <div id="barre_A">
+        <div class="barre_grid barre_text">
           <div>Bon</div>
           <div>Moyen</div>
           <div>Dégradé</div>
@@ -66,7 +66,9 @@
           <div>Très mauvais</div>
           <div>Extrèmement mauvais</div>
         </div>
+      </section>
 
+      <section>
         <div id="cadre_sport">
           <div class="sport">
             <!-- <img src="/images/autorisé.png"> -->
@@ -78,8 +80,9 @@
             <!-- indice de pratique sportive-->
           </div>
         </div>
-      </div>
+      </section>
     </main>
+
     <footer>
       <div id="cadre_footer">
         <div class="cadre_logo">

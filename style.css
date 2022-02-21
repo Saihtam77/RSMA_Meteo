@@ -1,3 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+/* couleur d'origine  */
+:root {
+  --color-ia-bleu: #50f0e6;
+  --color-ia-vert: #50ccaa;
+  --color-ia-jaune: #f0e641;
+  --color-ia-rouge: #ff5050;
+  --color-ia-violet: #960032;
+  --color-ia-rose: #872181;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -5,9 +19,18 @@ body {
   flex-direction: column;
 }
 
-/* margin et border de test*/
+/*backgroud*/
 
-/* haut de page */
+body {
+  background: no-repeat url(images/fond-gris.jpg);
+  background-size: cover;
+}
+/* body {
+  background: linear-gradient(-17deg,cornflowerblue 10%, skyblue, white, skyblue, cornflowerblue);
+} */
+
+/* header */
+
 #horodatage {
   border-bottom: solid 2px;
   min-height: 4rem;
@@ -33,36 +56,29 @@ body {
   justify-content: end;
 }
 
-/* centre */
-.main {
+/* Zone principale */
+main {
   display: flex;
   border: solid 1px;
-  flex: 1fr;
+  flex: 1;
+  padding: 1em 2em;
 }
 
-#cadre_meteo {
-  height: 80vh;
-  padding: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-}
+/* Infos météo */
 
-.cadre_img {
-  width: 15%;
-}
-
-.info_météo {
-  max-width: 100%;
+.info_meteo {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .celcus {
   display: flex;
   grid-template-columns: 1fr 1fr;
-  width: 85%;
   height: 1fr;
   align-self: center;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .celcus span {
@@ -70,61 +86,46 @@ body {
   border-right: solid 2px;
   margin-right: 0.7rem;
   padding-right: 0.5rem;
-  font-size: 35px;
-  height: 35px;
+  font-size: 45px;
+  height: 45px;
 }
 
-.météo {
-  max-height: 100%;
-  width: 150px;
-  height: 150px;
+.celcus div {
+  width: 1fr;
+  font-size: 20px;
 }
 
-/*  barre qualité d'air */
-.couleur {
-  padding: 3px;
-  height: 1em;
-  flex: 1;
-  text-align: center;
+.image-meteo {
+  max-width: 100%;
+  height: 270px;
+  padding: 0.5em;
 }
+
+/* Barre qualité de l'air */
+
+.cadre_fleche {
+  display: grid;
+}
+
+/*  Couleurs barre qualité d'air */
 
 .couleur[value="1"] {
   background-color: var(--color-ia-bleu);
 }
-
 .couleur[value="2"] {
   background-color: var(--color-ia-vert);
 }
-
 .couleur[value="3"] {
   background-color: var(--color-ia-jaune);
 }
-
 .couleur[value="4"] {
   background-color: var(--color-ia-rouge);
 }
-
 .couleur[value="5"] {
   background-color: var(--color-ia-violet);
 }
-
 .couleur[value="6"] {
   background-color: var(--color-ia-rose);
-}
-
-/* couleur d'origine  */
-:root {
-  --color-ia-bleu: #50f0e6;
-  --color-ia-vert: #50ccaa;
-  --color-ia-jaune: #f0e641;
-  --color-ia-rouge: #ff5050;
-  --color-ia-violet: #960032;
-  --color-ia-rose: #872181;
-}
-
-.cadre_fleche {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
 }
 
 .fleche {
@@ -149,23 +150,25 @@ body {
   text-align: center;
 }
 
-#barre_A {
-  /* display: flex; */
+.barre_grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   max-width: 100%;
-  text-align: center;
 }
 
-#barre_A div {
+.barre_text {
+  text-align: center;
   margin-top: 0.5rem;
 }
 
 #cadre_sport {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-template-rows: repeat(6, 1fr);
+  height: 100%;
 }
+
 .sport img {
   height: 95px;
   width: 95px;
@@ -176,9 +179,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: 2;
-  grid-row-start: 2;
   font-size: 24px;
+  grid-row-start: 3;
 }
 
 /*bas de page */
@@ -206,4 +208,109 @@ body {
   padding-left: 1rem;
   display: flex;
   align-items: center;
+}
+.cadre_rea div {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.cadre_rea :not(:first-child) {
+  /*Réalisateur*/
+  justify-content: center;
+}
+/* média Q sur "main"*/
+
+@media (orientation: landscape) {
+  main {
+    flex-direction: row;
+  }
+  /* Infos météo */
+
+  .info_meteo {
+    flex-direction: column;
+    margin-left: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  .celcus {
+    margin-top: 1em;
+  }
+  /* Flèche qualité air */
+
+  .cadre_fleche {
+    width: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  .fleche-col {
+    grid-row-start: 4;
+  }
+
+  .fleche {
+    transform: rotate(45deg);
+    margin-right: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  /* Barre qualité air et texte */
+
+  .barre_grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 0;
+  }
+
+  .barre {
+    width: 1rem;
+  }
+
+  .barre > div {
+    height: 100%;
+    width: 1.5rem;
+  }
+
+  .barre_text {
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 1em;
+  }
+  section:nth-child(1) {
+    display: flex;
+    flex: 1;
+  }
+  section:nth-child(2) {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (orientation: portrait) {
+  main {
+    flex-direction: column;
+  }
+
+  .barre > div {
+    height: 1em;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 780px) {
+  .barre_text {
+    visibility: hidden;
+  }
+
+  .fleche-col {
+    position: relative;
+  }
+
+  .fleche-col::after {
+    content: "Mauvais";
+    position: absolute;
+    top: 50%;
+  }
 }
