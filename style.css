@@ -131,6 +131,16 @@ body {
   height: 50px;
   width: 50px;
   transform: rotate(135deg);
+  animation: deplaceFleche 2s ease;
+}
+
+@keyframes deplaceFleche {
+  0% {
+  }
+  50% {
+  }
+  100% {
+  }
 }
 
 .fleche-col {
