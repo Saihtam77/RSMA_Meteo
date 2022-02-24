@@ -206,6 +206,7 @@ async function updateData() {
 
     img_AutoriserOuPas.src="images/autorisé.png";
     SportOuPas.textContent="Sport autorisé";
+    
   }
 
   else if (heatIndex_value>=32 && heatIndex_value<=40 || qualiteAire>=3 && qualiteAire<=4 ){
