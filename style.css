@@ -102,6 +102,9 @@ main {
 }
 
 /* Barre qualité de l'air */
+.fleche-col {
+  text-align: center;
+}
 
 .cadre_fleche {
   display: grid;
@@ -234,6 +237,10 @@ main {
     transform: rotate(45deg);
     margin-right: 0.5rem;
     margin-bottom: 0;
+  }
+
+  .fleche-col {
+    text-align: center;
   }
 
   /* Barre qualité air et texte */
