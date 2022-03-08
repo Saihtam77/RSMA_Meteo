@@ -46,7 +46,6 @@ function updateTime() {
 
 //Recuperatoin des données API
 function getWeatherData() {
-
   let t_getWeather = 86400000;
   setTimeout("getWeatherData()", t_getWeather);
 
@@ -77,10 +76,9 @@ function getWeatherData() {
 
       return data_value;
     });
-};
+}
 
-function getAirQualityData () {
-
+function getAirQualityData() {
   let t_getAireQuality = 3600000;
   setTimeout("getAirQualityData()", t_getAireQuality);
 
@@ -95,7 +93,7 @@ function getAirQualityData () {
 
   var queryUrl = apiBaseUrl + filter;
 
-  return fetch("madininair.json") //si pas internet utiliser le fichier data.json, si internet utilisé la variable queryUrl
+  return fetch(queryUrl) //si pas internet utiliser le fichier data.json, si internet utilisé la variable queryUrl
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -119,27 +117,25 @@ function getAirQualityData () {
         couleur: data.features[0].attributes.coul_qual,
       };
       // récupérer les éléments dont on veut changer la valeur dans la page et changer
-      
+
       return today;
     });
-};
+}
 
 //Mise a jours des donner dans le DOM un fois celle-ci recup par les API
 async function updateData() {
-
   //on demande a la fonction d'attendre la recupératio des donners API avant de continuer sont execution
-  const dataWeather_wait= await getWeatherData();
-  const dataAireQuality_wait= await getAirQualityData();
-
+  const dataWeather_wait = await getWeatherData();
+  const dataAireQuality_wait = await getAirQualityData();
 
   //Capture des element dans le DOM
   const meteo = document.querySelector(".image-meteo");
   const celcus = document.querySelector(".celcus :first-child");
   const humidite = document.querySelector(".precipitation");
   const vitesse_vent = document.querySelector(".humidite");
-  const img_AutoriserOuPas=document.querySelector(".img_AutoriserOuPas");
-  const SportOuPas=document.querySelector(".SportOuPas");
-  
+  const img_AutoriserOuPas = document.querySelector(".img_AutoriserOuPas");
+  const SportOuPas = document.querySelector(".SportOuPas");
+
   //Intégration dans le DOM des condition meteo
   let weatherData = getWeatherData();
   weatherData.then((value) => {
@@ -190,46 +186,39 @@ async function updateData() {
 
   //Dit si oui ou non la pratique du sport est conseillé
 
-  let qualiteAire=(await airData).qualite;
-  let t=parseInt((await weatherData).temperature);
-  let rh=parseInt((await weatherData).humidite);
+  let qualiteAire = (await airData).qualite;
+  let t = parseInt((await weatherData).temperature);
+  let rh = parseInt((await weatherData).humidite);
 
-  let heatIndex_value=indice_chaleur(50,20);
+  let heatIndex_value = indice_chaleur(50, 20);
   console.log(heatIndex_value);
 
-  if (heatIndex_value<=27 || qualiteAire<=2){
-
-    img_AutoriserOuPas.src="images/autorisé.png";
-    SportOuPas.textContent="Sport autorisé";
+  if (heatIndex_value <= 27 || qualiteAire <= 2) {
+    img_AutoriserOuPas.src = "images/autorisé.png";
+    SportOuPas.textContent = "Sport autorisé";
+  } else if (
+    (heatIndex_value >= 28 && heatIndex_value <= 31) ||
+    qualiteAire <= 2
+  ) {
+    img_AutoriserOuPas.src = "images/autorisé.png";
+    SportOuPas.textContent = "Sport autorisé";
+  } else if (
+    (heatIndex_value >= 32 && heatIndex_value <= 40) ||
+    (qualiteAire >= 3 && qualiteAire <= 4)
+  ) {
+    img_AutoriserOuPas.src = "images/restrint.png";
+    SportOuPas.textContent = "Sport limité dans l'enceint du régiments";
+  } else if (
+    (heatIndex_value >= 41 && heatIndex_value <= 53) ||
+    (qualiteAire >= 5 && qualiteAire <= 6)
+  ) {
+    img_AutoriserOuPas.src = "images/déconseillé.png";
+    SportOuPas.textContent = "Sport strictement interdit";
+  } else if (heatIndex_value > 53 || (qualiteAire >= 5 && qualiteAire <= 6)) {
+    img_AutoriserOuPas.src = "images/déconseillé.png";
+    SportOuPas.textContent = "Sport strictement interdit";
   }
-  else if (heatIndex_value>=28 && heatIndex_value<=31 || qualiteAire<=2){
-
-    img_AutoriserOuPas.src="images/autorisé.png";
-    SportOuPas.textContent="Sport autorisé";
-    
-  }
-
-  else if (heatIndex_value>=32 && heatIndex_value<=40 || qualiteAire>=3 && qualiteAire<=4 ){
-
-    img_AutoriserOuPas.src="images/restrint.png";
-    SportOuPas.textContent="Sport limité dans l'enceint du régiments";
-
-  }
-  else if (heatIndex_value>=41 && heatIndex_value<=53 || qualiteAire>=5 && qualiteAire<=6){
-
-    img_AutoriserOuPas.src="images/déconseillé.png";
-    SportOuPas.textContent="Sport strictement interdit";
-  }
-  else if (heatIndex_value>53 || qualiteAire>=5 && qualiteAire<=6){
-
-
-    img_AutoriserOuPas.src="images/déconseillé.png";
-    SportOuPas.textContent="Sport strictement interdit";
-  }
-} 
-
-
-
+}
 
 //Fonction de calcule de l'humidité et de conversion de la vitesse du vent
 function humidity_calcl(dewpoint_value, temp_value) {
@@ -250,6 +239,7 @@ function updateFleche(value) {
   var fleche = document.getElementsByClassName("fleche-col");
   // changer le style de l'element pour que grid-column-start soit égale à value
   fleche[0].style.gridColumnStart = value;
+  fleche[0].style.gridRowStart = value;
 }
 
 //Calcule l'indice de chaleur

@@ -135,12 +135,6 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.fleche-col {
-  /* css de deplacement de la fleche */
-  grid-column-start: 4;
-  text-align: center;
-}
-
 .barre_grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -234,10 +228,6 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
-  }
-
-  .fleche-col {
-    grid-row-start: 4;
   }
 
   .fleche {
