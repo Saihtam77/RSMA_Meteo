@@ -184,29 +184,25 @@ section:nth-child(3) {
 }
 
 #cadre_footer {
-  height: 1fr;
   display: flex;
-  max-width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
 }
 
 .cadre_rea {
-  text-align: start;
-  width: 50%;
   display: flex;
   justify-content: end;
   flex-direction: column;
 }
 
 .cadre_logo {
-  width: 50%;
-  padding-left: 1rem;
   display: flex;
   align-items: center;
 }
 .cadre_rea div {
   display: flex;
   justify-content: center;
-  text-align: left;
 }
 
 .cadre_rea :not(:first-child) {
