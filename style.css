@@ -64,6 +64,13 @@ main {
   padding: 1em 2em;
 }
 
+section:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
 /* Infos météo */
 
 .info_meteo {
@@ -146,13 +153,12 @@ main {
   margin-top: 0.5rem;
 }
 
-#cadre_sport {
+/* #cadre_sport {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   grid-template-rows: repeat(6, 1fr);
-  height: 100%;
-}
+} */
 
 .sport img {
   height: 95px;
@@ -274,7 +280,7 @@ main {
   main {
     flex-direction: column;
   }
-
+  
   .barre > div {
     height: 1em;
   }
