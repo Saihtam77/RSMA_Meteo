@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSMA Météo</title>
 
-    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body onload="all();">
+  <body onload="UpdateAll();">
     <header>
       <div id="horodatage">
         <div>
@@ -27,7 +27,7 @@
       <section>
         <div class="info_meteo">
           <div class="cadre_img">
-            <img class="image-meteo" src="icone météo/temperature(haute).png" />
+            <img class="image-meteo" src="" />
           </div>
 
           <div class="celcus">
@@ -42,7 +42,7 @@
       </section>
 
       <section>
-        <div class="cadre_fleche">
+        <div class="barre_grid cadre_fleche">
           <span class="fleche-col">
             <img class="fleche" src="images/fleche.png" />
           </span>
@@ -73,10 +73,10 @@
           <div class="sport">
             <!-- <img src="/images/autorisé.png"> -->
             <!-- <img src="/images/restrint.png"> -->
-            <img src="/images/déconseillé.png" />
+            <img class="img_AutoriserOuPas" src="" alt="" />
             <!-- <img src="/images/danger.png"> -->
 
-            <div>Pratique du sport déconséillé</div>
+            <div class="SportOuPas"></div>
             <!-- indice de pratique sportive-->
           </div>
         </div>
