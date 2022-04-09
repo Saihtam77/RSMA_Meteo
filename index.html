@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RSMA Météo</title>
 
-    <script src="script2.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSMA Météo</title>
 
-  <body onload="UpdateAll();">
-    <header>
-      <div id="horodatage">
-        <div>
-          <div class="date"></div>
-          <div class="actualisation">Actualisé à 19h30</div>
-          <!--a actualiser toute les heures-->
-        </div>
-        <div class="heure"></div>
-        <!-- horlogue-->
+  <script src="script2.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="UpdateAll();">
+  <header>
+    <div id="horodatage">
+      <div>
+        <div class="date"></div>
+        <div class="actualisation">Actualisé à 19h30</div>
+        <!--a actualiser toute les heures-->
       </div>
-    </header>
+      <div class="heure"></div>
+      <!-- horlogue-->
+    </div>
+  </header>
 
-    <main>
-      <section>
-        <div class="info_meteo">
-          <div class="cadre_img">
-            <img class="image-meteo" src="" />
-          </div>
-
-          <div class="celcus">
-            <span></span>
-            <div class="info_celcus">
-              <div class="precipitation"></div>
-              <div class="humidite"></div>
-              <div class="vitesse_vent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="barre_grid cadre_fleche">
-          <span class="fleche-col">
-            <img class="fleche" src="images/fleche.png" />
-          </span>
-          <!-- text de la barre a afficher avec le JS -->
+  <main>
+    <section>
+      <div class="info_meteo">
+        <div class="cadre_img">
+          <img class="image-meteo" src="" />
         </div>
 
-        <div class="barre_grid barre">
-          <!--qualité de l'aire -->
-          <div class="couleur" value="1"></div>
-          <div class="couleur" value="2"></div>
-          <div class="couleur" value="3"></div>
-          <div class="couleur" value="4"></div>
-          <div class="couleur" value="5"></div>
-          <div class="couleur" value="6"></div>
-        </div>
-        <div class="barre_grid barre_text">
-          <div>Bon</div>
-          <div>Moyen</div>
-          <div>Dégradé</div>
-          <div>Mauvais</div>
-          <div>Très mauvais</div>
-          <div>Extrèmement mauvais</div>
-        </div>
-      </section>
-
-      <section>
-        <div id="cadre_sport">
-          <div class="sport">
-            <!-- <img src="/images/autorisé.png"> -->
-            <!-- <img src="/images/restrint.png"> -->
-            <img class="img_AutoriserOuPas" src="" alt="" />
-            <!-- <img src="/images/danger.png"> -->
-
-            <div class="SportOuPas"></div>
-            <!-- indice de pratique sportive-->
+        <div class="celcus">
+          <span></span>
+          <div class="info_celcus">
+            <div class="precipitation"></div>
+            <div class="humidite"></div>
+            <div class="vitesse_vent"></div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div id="cadre_footer">
-        <div class="cadre_logo">
-          <img class="logoR" src="images/logo rsma.png" />
-        </div>
-        <!-- espace logo-->
-        <div class="cadre_rea">
-          <div>Réalisé par la section D-Web du RSMA-M (2021-2022)</div>
-          <div>Marsouins Geroffroy M, Alcindor N, Joly D</div>
-        </div>
-        <!-- ajouté source -->
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section>
+      <div class="barre_grid cadre_fleche">
+        <span class="fleche-col">
+          <img class="fleche" src="images/fleche.png" />
+        </span>
+        <!-- text de la barre a afficher avec le JS -->
+      </div>
+
+      <div class="barre_grid barre">
+        <!--qualité de l'aire -->
+        <div class="couleur" value="1"></div>
+        <div class="couleur" value="2"></div>
+        <div class="couleur" value="3"></div>
+        <div class="couleur" value="4"></div>
+        <div class="couleur" value="5"></div>
+        <div class="couleur" value="6"></div>
+      </div>
+      <div class="barre_grid barre_text">
+        <div>Bon</div>
+        <div>Moyen</div>
+        <div>Dégradé</div>
+        <div>Mauvais</div>
+        <div>Très mauvais</div>
+        <div>Extrèmement mauvais</div>
+      </div>
+    </section>
+
+    <section>
+      <div id="cadre_sport">
+        <div class="sport">
+          <!-- <img src="/images/autorisé.png"> -->
+          <!-- <img src="/images/restrint.png"> -->
+          <img class="img_AutoriserOuPas" src="" alt="" />
+          <!-- <img src="/images/danger.png"> -->
+
+          <div class="SportOuPas"></div>
+          <!-- indice de pratique sportive-->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="cadre_footer">
+      <div class="cadre_logo">
+        <img class="logoR" src="images/logo rsma.png" />
+      </div>
+      <!-- espace logo-->
+      <div class="cadre_rea">
+        <div>Réalisé par la section D-Web du RSMA-M (2021-2022)</div>
+        <div>Marsouins Geroffroy M, Alcindor N, Joly D</div>
+      </div>
+      <!-- ajouté source -->
+    </div>
+  </footer>
+</body>
+
 </html>
