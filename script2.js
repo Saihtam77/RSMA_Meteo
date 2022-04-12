@@ -154,31 +154,31 @@ async function updateData() {
         //Condtion d'affichage des image météo
         switch (value.state) {
             case "RA":
-                meteo.src = "icone météo/rain.png";
+                meteo.src = "icone-meteo/rain.png";
                 break;
             case "TS":
-                meteo.src = "icone météo/fort orage.png";
+                meteo.src = "icone-meteo/fort-orage.png";
                 break;
             case "+RA":
-                meteo.src = "icone météo/pluvieux.png";
+                meteo.src = "icone-meteo/pluvieux.png";
                 break;
             case "SKC":
-                meteo.src = "icone météo/ensolellier.png";
+                meteo.src = "icone-meteo/ensoleille.png";
                 break;
             case "NSC":
-                meteo.src = "icone météo/ensolellier.png";
+                meteo.src = "icone-meteo/ensoleille.png";
                 break;
             case "FEW":
-                meteo.src = "icone météo/nuageux.png";
+                meteo.src = "icone-meteo/nuageux.png";
                 break;
             case "SCT":
-                meteo.src = "icone météo/nuageux.png";
+                meteo.src = "icone-meteo/nuageux.png";
                 break;
             case "BKN":
-                meteo.src = "icone météo/nuageux.png";
+                meteo.src = "icone-meteo/nuageux.png";
                 break;
             case "OVC":
-                meteo.src = "icone météo/nuageux.png";
+                meteo.src = "icone-meteo/nuageux.png";
                 break;
         }
     });
@@ -200,28 +200,28 @@ async function updateData() {
     console.log(heatIndex_value);
 
     if (heatIndex_value <= 27 || qualiteAire <= 2) {
-        img_AutoriserOuPas.src = "images/autorisé.png";
+        img_AutoriserOuPas.src = "images/autorise.png";
         SportOuPas.textContent = "Sport autorisé";
     } else if (
         (heatIndex_value >= 28 && heatIndex_value <= 31) ||
         qualiteAire <= 2
     ) {
-        img_AutoriserOuPas.src = "images/autorisé.png";
+        img_AutoriserOuPas.src = "images/autorise.png";
         SportOuPas.textContent = "Sport autorisé";
     } else if (
         (heatIndex_value >= 32 && heatIndex_value <= 40) ||
         (qualiteAire >= 3 && qualiteAire <= 4)
     ) {
-        img_AutoriserOuPas.src = "images/restrint.png";
-        SportOuPas.textContent = "Sport limité dans l'enceint du régiments";
+        img_AutoriserOuPas.src = "images/restreint.png";
+        SportOuPas.textContent = "Sport limité dans l'enceinte du régiments";
     } else if (
         (heatIndex_value >= 41 && heatIndex_value <= 53) ||
         (qualiteAire >= 5 && qualiteAire <= 6)
     ) {
-        img_AutoriserOuPas.src = "images/déconseillé.png";
+        img_AutoriserOuPas.src = "images/deconseille.png";
         SportOuPas.textContent = "Sport strictement interdit";
     } else if (heatIndex_value > 53 || (qualiteAire >= 5 && qualiteAire <= 6)) {
-        img_AutoriserOuPas.src = "images/déconseillé.png";
+        img_AutoriserOuPas.src = "images/deconseille.png";
         SportOuPas.textContent = "Sport strictement interdit";
     }
 }
