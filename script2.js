@@ -93,7 +93,7 @@ function getAirQualityData() {
 
   var queryUrl = apiBaseUrl + filter;
 
-  return fetch(queryUrl) //si pas internet utiliser le fichier data.json, si internet utilisé la variable queryUrl
+  return fetch("madininair.json") //si pas internet utiliser le fichier data.json, si internet utilisé la variable queryUrl
     .then((res) => {
       if (res.ok) {
         return res.json();
@@ -130,6 +130,7 @@ async function updateData() {
 
   //Capture des element dans le DOM
   const meteo = document.querySelector(".image-meteo");
+  
   const celcus = document.querySelector(".celcus :first-child");
   const humidite = document.querySelector(".precipitation");
   const vitesse_vent = document.querySelector(".humidite");
