@@ -92,8 +92,8 @@ function getWeatherData() {
 }
 
 function getAirQualityData() {
-    let t_getAireQuality = 3600000;
-    setTimeout("getAirQualityData()", t_getAireQuality);
+  let t_getAireQuality = 3600000;
+  setTimeout("getAirQualityData()", t_getAireQuality);
 
     const apiBaseUrl =
         "https://services1.arcgis.com/y8pKCLYeLI1K2217/arcgis/rest/services/ind_martinique/FeatureServer/0/query?";
@@ -137,58 +137,59 @@ function getAirQualityData() {
 
 //Mise a jours des donner dans le DOM un fois celle-ci recup par les API
 async function updateData() {
-    //on demande a la fonction d'attendre la recupératio des donners API avant de continuer sont execution
-    const dataWeather_wait = await getWeatherData();
-    const dataAireQuality_wait = await getAirQualityData();
+  //on demande a la fonction d'attendre la recupératio des donners API avant de continuer sont execution
+  const dataWeather_wait = await getWeatherData();
+  const dataAireQuality_wait = await getAirQualityData();
 
-    //Capture des element dans le DOM
-    const meteo = document.querySelector(".image-meteo");
-    const celcus = document.querySelector(".celcus :first-child");
-    const humidite = document.querySelector(".precipitation");
-    const vitesse_vent = document.querySelector(".humidite");
-    const img_AutoriserOuPas = document.querySelector(".img_AutoriserOuPas");
-    const SportOuPas = document.querySelector(".SportOuPas");
+  //Capture des element dans le DOM
+  const meteo = document.querySelector(".image-meteo");
+  
+  const celcus = document.querySelector(".celcus :first-child");
+  const humidite = document.querySelector(".precipitation");
+  const vitesse_vent = document.querySelector(".humidite");
+  const img_AutoriserOuPas = document.querySelector(".img_AutoriserOuPas");
+  const SportOuPas = document.querySelector(".SportOuPas");
 
-    //Intégration dans le DOM des condition meteo
-    let weatherData = getWeatherData();
-    weatherData.then((value) => {
-        console.log(value);
+  //Intégration dans le DOM des condition meteo
+  let weatherData = getWeatherData();
+  weatherData.then((value) => {
+    console.log(value);
 
-        celcus.textContent = value.temperature + "°C";
-        humidite.textContent = "Humidité: " + value.humidite + "%";
-        vitesse_vent.textContent = "Vent: " + value.vitesseVentKmh + "Km/h";
+    celcus.textContent = value.temperature + "°C";
+    humidite.textContent = "Humidité: " + value.humidite + "%";
+    vitesse_vent.textContent = "Vent: " + value.vitesseVentKmh + "Km/h";
 
-        //Condtion d'affichage des image météo
-        switch (value.state) {
-            case "RA":
-                meteo.src = "icone-meteo/rain.png";
-                break;
-            case "TS":
-                meteo.src = "icone-meteo/fort-orage.png";
-                break;
-            case "+RA":
-                meteo.src = "icone-meteo/pluvieux.png";
-                break;
-            case "SKC":
-                meteo.src = "icone-meteo/ensoleille.png";
-                break;
-            case "NSC":
-                meteo.src = "icone-meteo/ensoleille.png";
-                break;
-            case "FEW":
-                meteo.src = "icone-meteo/nuageux.png";
-                break;
-            case "SCT":
-                meteo.src = "icone-meteo/nuageux.png";
-                break;
-            case "BKN":
-                meteo.src = "icone-meteo/nuageux.png";
-                break;
-            case "OVC":
-                meteo.src = "icone-meteo/nuageux.png";
-                break;
-        }
-    });
+    //Condtion d'affichage des image météo
+    switch (value.state) {
+      case "RA":
+        meteo.src = "icone météo/rain.png";
+        break;
+      case "TS":
+        meteo.src = "icone météo/fort orage.png";
+        break;
+      case "+RA":
+        meteo.src = "icone météo/pluvieux.png";
+        break;
+      case "SKC":
+        meteo.src = "icone météo/ensolellier.png";
+        break;
+      case "NSC":
+        meteo.src = "icone météo/ensolellier.png";
+        break;
+      case "FEW":
+        meteo.src = "icone météo/nuageux.png";
+        break;
+      case "SCT":
+        meteo.src = "icone météo/nuageux.png";
+        break;
+      case "BKN":
+        meteo.src = "icone météo/nuageux.png";
+        break;
+      case "OVC":
+        meteo.src = "icone météo/nuageux.png";
+        break;
+    }
+  });
 
     //Mise a jour de la fleche indiquant la qualité de l'aire
     let airData = getAirQualityData();
@@ -206,31 +207,31 @@ async function updateData() {
     let heatIndex_value = indice_chaleur(50, 20);
     console.log(heatIndex_value);
 
-    if (heatIndex_value <= 27 || qualiteAire <= 2) {
-        img_AutoriserOuPas.src = "images/autorise.png";
-        SportOuPas.textContent = "Sport autorisé";
-    } else if (
-        (heatIndex_value >= 28 && heatIndex_value <= 31) ||
-        qualiteAire <= 2
-    ) {
-        img_AutoriserOuPas.src = "images/autorise.png";
-        SportOuPas.textContent = "Sport autorisé";
-    } else if (
-        (heatIndex_value >= 32 && heatIndex_value <= 40) ||
-        (qualiteAire >= 3 && qualiteAire <= 4)
-    ) {
-        img_AutoriserOuPas.src = "images/restreint.png";
-        SportOuPas.textContent = "Sport limité dans l'enceinte du régiments";
-    } else if (
-        (heatIndex_value >= 41 && heatIndex_value <= 53) ||
-        (qualiteAire >= 5 && qualiteAire <= 6)
-    ) {
-        img_AutoriserOuPas.src = "images/deconseille.png";
-        SportOuPas.textContent = "Sport strictement interdit";
-    } else if (heatIndex_value > 53 || (qualiteAire >= 5 && qualiteAire <= 6)) {
-        img_AutoriserOuPas.src = "images/deconseille.png";
-        SportOuPas.textContent = "Sport strictement interdit";
-    }
+  if (heatIndex_value <= 27 || qualiteAire <= 2) {
+    img_AutoriserOuPas.src = "images/autorisé.png";
+    SportOuPas.textContent = "Sport autorisé";
+  } else if (
+    (heatIndex_value >= 28 && heatIndex_value <= 31) ||
+    qualiteAire <= 2
+  ) {
+    img_AutoriserOuPas.src = "images/autorisé.png";
+    SportOuPas.textContent = "Sport autorisé";
+  } else if (
+    (heatIndex_value >= 32 && heatIndex_value <= 40) ||
+    (qualiteAire >= 3 && qualiteAire <= 4)
+  ) {
+    img_AutoriserOuPas.src = "images/restrint.png";
+    SportOuPas.textContent = "Sport limité dans l'enceint du régiments";
+  } else if (
+    (heatIndex_value >= 41 && heatIndex_value <= 53) ||
+    (qualiteAire >= 5 && qualiteAire <= 6)
+  ) {
+    img_AutoriserOuPas.src = "images/déconseillé.png";
+    SportOuPas.textContent = "Sport strictement interdit";
+  } else if (heatIndex_value > 53 || (qualiteAire >= 5 && qualiteAire <= 6)) {
+    img_AutoriserOuPas.src = "images/déconseillé.png";
+    SportOuPas.textContent = "Sport strictement interdit";
+  }
 }
 
 //Fonction de calcule de l'humidité et de conversion de la vitesse du vent
