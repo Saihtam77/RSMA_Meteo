@@ -49,9 +49,16 @@ function getWeatherData() {
     let t_getWeather = 86400000;
     setTimeout("getWeatherData()", t_getWeather);
 
+    // METAR sources
+    // https://api.aviationapi.com/v1/weather/metar?apt=TFFF
+    // https://tgftp.nws.noaa.gov/data/observations/metar/stations/TFFF.TXT
+    // HTML => https://fr.allmetsat.com/metar-taf/amerique-du-sud.php?icao=TFFF
+    // https://api.met.no/weatherapi/tafmetar/1.0/metar.txt?icao=tfff
+
     // https://thingproxy.freeboard.io/fetch/ helps to solve CORS problem
-    return fetch(
-        "https://thingproxy.freeboard.io/fetch/https://api.aviationapi.com/v1/weather/metar?apt=TFFF"
+    // not working anymore trying https://cors-anywhere-sage.vercel.app/ //vercel hosted cors-anywhere
+    https: return fetch(
+        "https://cors-anywhere-sage.vercel.app/api.aviationapi.com/v1/weather/metar?apt=TFFF"
     )
         .then((data) => {
             //success or not
